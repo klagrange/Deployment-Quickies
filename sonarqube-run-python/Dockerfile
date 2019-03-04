@@ -19,12 +19,12 @@ RUN pip3 install --no-cache-dir -r requirements.txt
 
 RUN pip3 install coverage
 
+RUN pip3 install pytest-cov
+
 COPY . .
 
 RUN coverage erase
 
-RUN coverage run *.py
-
-RUN coverage report -m
+RUN py.test --cov --cov-report xml
 
 CMD ["/usr/src/sonarqube/sonar-scanner-3.3.0.1492-linux/bin/sonar-scanner"]
