@@ -19,9 +19,3 @@ services:
       SONARQUBE_JDBC_URL: "jdbc:postgresql://postgres:5432/sonar"
     depends_on:
       - postgres
-  sonarqube-scanner:
-    build:
-      context: ./scanner
-    depends_on:
-      - sonarqube
-      - postgres
