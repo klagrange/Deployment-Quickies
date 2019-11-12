@@ -24,7 +24,7 @@ $ ./run-sonar-scanner.sh
 ```
 
 # OCR Caffe dockerized
-Containerized https://github.com/MichalBusta/DeepTextSpotter.git with all required depencies for OCR development. 
+Containerized https://github.com/MichalBusta/DeepTextSpotter.git with all required depencies for OCR development.
 ```sh
 docker build . -t XXX
 ./dev-remote-executer.sh /bin/bash
@@ -34,3 +34,6 @@ docker build . -t XXX
 
 # Naive deployment
 Script to help deploy dockerized application on remote server based on ssh/scp connection.
+
+# Docker node 11 sonarqube
+base image node:11 with python (+request lib installed)
